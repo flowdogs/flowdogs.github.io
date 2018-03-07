@@ -1,5 +1,5 @@
 .navbar {
-    background: rgb(46, 32, 170);
+    background: black;
 }
 
 .nav-link,
@@ -14,7 +14,7 @@
 
 .nav-link:hover {
     background: #f4f4f4;
-    color: rgb(46, 32, 170);
+    color: black;
 }
 
 .navbar-collapse {
@@ -23,4 +23,44 @@
 
 .navbar-toggler {
     background: #fff !important;
+}
+
+.header {
+    background-image: url('./images/flowdogshop.jpg');
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+}
+
+.overlay {
+    position: absolute;
+    min-height: 100%;
+    min-width: 100%;
+    left: 0;
+    top: 0;
+    background: rgba(244, 244, 244, 0.79);
+}
+
+.description {
+    position: absolute;
+    top: 30%;
+    margin: auto;
+    padding: 2em;
+}
+
+.description h1 {
+    color: black;
+}
+
+.description p {
+    color: #666;
+    font-size: 20px;
+    width: 50%;
+    line-height: 1.5;
+}
+
+.description button {
+    border: 1px solid black;
+    background: black;
+    color: #fff;
 }
