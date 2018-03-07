@@ -7,9 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Bootstrap CSS -->
-    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ"
-        crossorigin="anonymous"> -->
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+
     <link rel="stylesheet" type="text/css" href="main.css">
 </head>
 
@@ -25,19 +24,19 @@
             <ul class="navbar-nav mr-4">
 
                 <li class="nav-item">
-                    <a class="nav-link" href="#">About</a>
+                    <a class="nav-link" data-value="flowdogshop" href="#">Shop</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link " href="#">Portfolio</a>
+                    <a class="nav-link" data-value="event" href="#">Event</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link " href="#">Team</a>
+                    <a class="nav-link" data-value="blog" href="#">Blog</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link " href="#">Post</a>
+                    <a class="nav-link" data-value="about" href="#">About</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link " href="#">Contact</a>
+                    <a class="nav-link" data-value="contact" href="#">Contact</a>
                 </li>
             </ul>
 
@@ -45,27 +44,88 @@
     </nav>
 
     <header class="header">
-        <div class="overlay"></div>
-        <div class="container">
-            <div class="description text-center">
-                <h3>
-                    Hello, Welcome To My officail Website
-                    <p>
-                        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
-                        mollit anim id est laborum.</p>
-                    <button class="btn btn-outline-secondary">See more</button>
-                </h3>
-            </div>
-        </div>
+
     </header>
 
-    <!-- jQuery first, then Tether, then Bootstrap JS. -->
-    <!-- <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n"
-        crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb"
-        crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn"
-        crossorigin="anonymous"></script> -->
+
+
+
+
+    <!-- Flow Dog Shop -->
+    <div class="flowdogshop" id="flowdogshop">
+        <h1 class="text-center">Flow Dog Shop</h1>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 col-md-4 col-sm-12">
+                    <img src="images/flowdogshop/board1.jpg" class="img-fluid">
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-12">
+                    <img src="images/flowdogshop/board2.jpg" class="img-fluid">
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-12">
+                    <img src="images/flowdogshop/flow-bodyboard.jpg" class="img-fluid">
+                </div>
+
+                <div class="col-lg-4 col-md-4 col-sm-12">
+                    <img src="images/flowdogshop/board3-front.jpg" class="img-fluid">
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-12">
+                    <img src="images/flowdogshop/board3-back.jpg" class="img-fluid">
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-12">
+                    <img src="images/flowdogshop/pappy-board.jpg" class="img-fluid">
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <!-- About -->
+    <div class="about row" id="about">
+        <div class="col-lg-4 col-md-4 col-sm-12 text-center">
+            <img src="images/mike-pappy.jpg" class="img-fluid">
+            <span>Flow Dogs Founder - Mike Pappy</span>
+        </div>
+        <div class="col-lg-8 col-md-8 col-sm-12 desc">
+            <h3>Flow Dogs</h3>
+            <p>
+                Flow Dogs is a group of people that enjoy both body boarding and flow boarding on the flow rider and any other means of flowing
+                on water! We enjoy it so much it effects our lives in a positive way. Sometimes putting us all in the DOG
+                HOUSE! FLOW LOVE RULES!
+            </p>
+        </div>
+    </div>
+
+
+
+    <!-- Contact form -->
+    <div class="contact-form" id="contact">
+        <div class="container">
+            <form>
+                <div class="row">
+                    <div class="col-lg-4 col-md-4 col-sm-12">
+                        <h1>Get in Touch</h1>
+                    </div>
+                    <div class="col-lg-8 col-md-8 col-sm-12 right">
+                        <div class="form-group">
+                            <input type="text" class="form-control form-control-lg" placeholder="Your Name" name="">
+                        </div>
+                        <div class="form-group">
+                            <input type="email" class="form-control form-control-lg" placeholder="YourEmail@email.com" name="email">
+                        </div>
+                        <div class="form-group">
+                            <textarea class="form-control form-control-lg"></textarea>
+                        </div>
+                        <input type="submit" class="btn btn-secondary btn-block" value="Send" name="">
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 

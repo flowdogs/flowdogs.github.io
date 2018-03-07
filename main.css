@@ -1,3 +1,16 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway');
+html,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+a {
+    font-family: "Raleway";
+}
+
+
 .navbar {
     background: black;
 }
@@ -30,37 +43,86 @@
     background-attachment: fixed;
     background-size: cover;
     background-position: center;
+    height: 100vh;
 }
 
-.overlay {
-    position: absolute;
-    min-height: 100%;
-    min-width: 100%;
-    left: 0;
-    top: 0;
-    background: rgba(244, 244, 244, 0.79);
+/*Flow Dog Shop*/
+
+.flowdogshop {
+    margin: 4em 0;
+    position: relative;
 }
 
-.description {
-    position: absolute;
-    top: 30%;
-    margin: auto;
+.flowdogshop h1 {
+    color: black;
+    margin: 2em;
+}
+
+.flowdogshop img {
+    height: 30rem;
+    margin: 1em;
+}
+
+/* About */
+.about {
+    margin: 4em 0;
+    padding: 1em;
+    position: relative;
+}
+
+.about h1 {
+    color: black;
+    margin: 2em;
+}
+
+.about img {
+    height: 30rem;
+    border-radius: 50%
+}
+
+.about span {
+    display: block;
+    color: #888;
+    width: 100%;
+}
+
+.about .desc {
     padding: 2em;
+    border-left: 4px solid #10828C;
 }
 
-.description h1 {
+.about .desc h3 {
+    color: #10828C;
+}
+
+.about .desc p {
+    line-height: 2;
+    color: #888;
+}
+
+/*Contact Form*/
+
+.contact-form {
+    margin: 6em 0;
+    position: relative;
+}
+
+.contact-form h1 {
+    padding: 2em 1px;
     color: black;
 }
 
-.description p {
-    color: #666;
-    font-size: 20px;
-    width: 50%;
-    line-height: 1.5;
+.contact-form .right {
+    max-width: 600px;
 }
 
-.description button {
-    border: 1px solid black;
+.contact-form .right .btn-secondary {
     background: black;
     color: #fff;
+    border: 0;
+}
+
+.contact-form .right .form-control::placeholder {
+    color: #888;
+    font-size: 16px;
 }
