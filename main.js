@@ -5,12 +5,8 @@ $(document).ready(function () {
 
 function scrollAnimationWhenNavbarIsClicked() {
     $(".navbar a").click(function () {
-        console.error($("#" + $(this).data('value')));
-        console.error($("#" + $(this).data('value')).offset());
-        console.error($("#" + $(this).data('value')).offset().top);
-
         $("body,html").animate({
-            scrollTop: $("#" + $(this).data('value')).offset().top
+            scrollTop: $("#" + $(this).data('value')).offset().top - $(".navbar").outerHeight()
         }, 1000)
     });
 }
