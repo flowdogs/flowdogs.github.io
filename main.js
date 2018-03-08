@@ -1,16 +1,7 @@
 $(document).ready(function () {
-    setNavBar();
     scrollAnimationWhenNavbarIsClicked();
 });
 
-function setNavBar() {
-    // $.get("navigation.html", function(data){
-    //     $("#nav-placeholder").replaceWith(data);
-    // });
-
-    // console.error($("#nav-placeholder"));
-    // $("#nav-placeholder").load("./nav-bar.html");
-}
 
 function scrollAnimationWhenNavbarIsClicked() {
     $(".navbar a").click(function () {

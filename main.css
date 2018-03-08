@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Raleway');
+
 html,
 h1,
 h2,
@@ -10,9 +11,8 @@ a {
     font-family: "Raleway";
 }
 
-
 .navbar {
-    background: black;
+    background: rgba(0, 0, 0, 0.8);
 }
 
 .nav-link,
@@ -46,24 +46,8 @@ a {
     height: 100vh;
 }
 
-/*Flow Dog Shop*/
-
-.flowdogshop {
-    margin: 4em 0;
-    position: relative;
-}
-
-.flowdogshop h1 {
-    color: black;
-    margin: 2em;
-}
-
-.flowdogshop img {
-    height: 30rem;
-    margin: 1em;
-}
-
 /* About */
+
 .about {
     margin: 4em 0;
     padding: 1em;
@@ -99,6 +83,65 @@ a {
     line-height: 2;
     color: #888;
 }
+
+/*Flow Dog Shop*/
+
+.flowdogshop {
+    margin: 4em 0;
+    position: relative;
+}
+
+.flowdogshop h1 {
+    color: black;
+    margin: 2em;
+}
+
+.flowdogshop .img-container {
+    overflow: hidden;
+    position: relative;
+    height: 30rem;
+}
+
+.flowdogshop .img-container:hover .img-overlay {
+    opacity: 1;
+}
+
+.flowdogshop .img-container:hover .text-overlay {
+    opacity: 1;
+}
+
+.flowdogshop img {
+    margin: 1em;
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.flowdogshop .img-overlay {
+    position: absolute;
+    top: 0;
+    color: #f1f1f1;
+    width: 100%;
+    transition: .5s ease;
+    opacity: 0;
+}
+
+.flowdogshop .text-overlay {
+    position: absolute;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.6);
+    color: #f1f1f1;
+    width: 100%;
+    transition: .5s ease;
+    opacity: 0;
+    color: white; 
+    font-size: 20px;
+    padding: 20px;
+    margin-left: 1rem;
+    text-align: center;
+}
+
+
 
 /*Contact Form*/
 
