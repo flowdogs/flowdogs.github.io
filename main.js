@@ -5,12 +5,26 @@ $(document).ready(function () {
 
 function scrollAnimationWhenNavbarIsClicked() {
     $(".navbar a").click(function () {
-        console.error($("#" + $(this).data('value')));
-        console.error($("#" + $(this).data('value')).offset());
-        console.error($("#" + $(this).data('value')).offset().top);
-
         $("body,html").animate({
-            scrollTop: $("#" + $(this).data('value')).offset().top
+            scrollTop: $("#" + $(this).data('value')).offset().top - $(".navbar").outerHeight()
         }, 1000)
     });
+}
+
+function test() {
+    $.ajax({
+        url: "https://formspree.io/flowdogshop@gmail.com",
+        headers: { "Accept": "application/json;" },
+        method: "POST",
+        data: {
+            message: "hello!"
+        },
+        dataType: "json",
+        success: function (data) {
+            console.error(data);
+        },
+        error: function (error) {
+            console.error(error);
+        }
+    })
 }
