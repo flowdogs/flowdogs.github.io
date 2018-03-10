@@ -16,7 +16,7 @@ function orderNow() {
         title: 'JakeChipman pro model',
         content: 'url:ordernow.html',
         closeIcon: true,
-        columnClass: 'col-md-6 col-md-offset-6 col-xs-6 col-xs-offset-6',
+        columnClass: 'col-md-4 col-md-offset-8 col-xs-6 col-xs-offset-6',
         containerFluid: true,
         draggable: true,
         theme: 'bootstrap',
