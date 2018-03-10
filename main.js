@@ -11,9 +11,9 @@ function scrollAnimationWhenNavbarIsClicked() {
     });
 }
 
-function orderNow() {
+function orderNow(title) {
     $.dialog({
-        title: 'JakeChipman pro model',
+        title: title,
         content: 'url:ordernow.html',
         closeIcon: true,
         columnClass: 'col-md-4 col-md-offset-8 col-xs-6 col-xs-offset-6',
