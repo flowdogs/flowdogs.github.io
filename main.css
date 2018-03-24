@@ -1,5 +1,10 @@
 @import url('https://fonts.googleapis.com/css?family=Raleway');
 
+:root {
+    --main-bg-color: black;
+    --main-title-txt-color: black; 
+}
+
 html,
 h1,
 h2,
@@ -92,7 +97,7 @@ a {
 }
 
 .flowdogshop h1 {
-    color: black;
+    color: var(--main-title-txt-color);
     margin: 2em;
 }
 
@@ -134,7 +139,6 @@ a {
     width: 100%;
     transition: .5s ease;
     opacity: 0;
-    color: white; 
     font-size: 20px;
     padding: 20px;
     margin-left: 1rem;
@@ -152,7 +156,7 @@ a {
 
 .contact-form h1 {
     padding: 2em 1px;
-    color: black;
+    color: var(--main-title-txt-color);
 }
 
 .contact-form .right {
@@ -160,7 +164,7 @@ a {
 }
 
 .contact-form .right .btn-secondary {
-    background: black;
+    background: var(--main-bg-color);
     color: #fff;
     border: 0;
 }
