@@ -1,8 +1,14 @@
 @import url('https://fonts.googleapis.com/css?family=Raleway');
 
 :root {
-    --main-bg-color: black;
-    --main-title-txt-color: black; 
+    --primary-bg-color: black;
+    --primary-txt-color: white; 
+    --secondary-bg-color: #f4f4f4;
+    --secondary-txt-color: black; 
+    --tertiary-bg-color: white;
+    --tertiary-txt-color: black; 
+    --font-family: "Raleway";
+    /* --font-family: "hco gotham ssm,helvetica neue,Helvetica,Arial,sans-serif" */
 }
 
 html,
@@ -13,7 +19,7 @@ h4,
 h5,
 h6,
 a {
-    font-family: "Raleway";
+    font-family: var(--font-family);
 }
 
 .navbar {
@@ -22,7 +28,7 @@ a {
 
 .nav-link,
 .navbar-brand {
-    color: #f4f4f4;
+    color: var(--secondary-bg-color) !important;
     cursor: pointer;
 }
 
@@ -31,8 +37,8 @@ a {
 }
 
 .nav-link:hover {
-    background: #f4f4f4;
-    color: black;
+    background: var(--secondary-bg-color);
+    color: var(--secondary-txt-color);
 }
 
 .navbar-collapse {
@@ -43,6 +49,7 @@ a {
     background: #fff !important;
 }
 
+/* Header */
 .header {
     background-image: url('./images/flowdogshop.jpg');
     background-attachment: fixed;
@@ -51,17 +58,29 @@ a {
     height: 100vh;
 }
 
-/* About */
 
-.about {
-    margin: 4em 0;
-    padding: 1em;
+/* Welcome */
+.welcome {
     position: relative;
+    background: var(--primary-bg-color);
+}
+
+.welcome h1 {
+    color: var(--primary-txt-color);
+    padding: 2em;
+    margin-bottom: 0;
+}
+
+
+/* About */
+.about {
+    padding: 3em;
+    position: relative;
+    background: var(--secondary-bg-color);
 }
 
 .about h1 {
-    color: black;
-    margin: 2em;
+    color: var(--secondary-txt-color);
 }
 
 .about img {
@@ -92,13 +111,14 @@ a {
 /*Flow Dog Shop*/
 
 .flowdogshop {
-    margin: 4em 0;
+    padding: 2em 0;
     position: relative;
+    background: var(--tertiary-bg-color);
 }
 
 .flowdogshop h1 {
-    color: var(--main-title-txt-color);
-    margin: 2em;
+    color: var(--tertiary-txt-color);
+    padding: 1em 0;
 }
 
 .flowdogshop .img-container {
@@ -150,13 +170,14 @@ a {
 /*Contact Form*/
 
 .contact-form {
-    margin: 6em 0;
     position: relative;
+    background: var(--secondary-bg-color);
+    padding: 3em 1px;
 }
 
 .contact-form h1 {
     padding: 2em 1px;
-    color: var(--main-title-txt-color);
+    color: var(--secondary-txt-color);
 }
 
 .contact-form .right {
@@ -164,7 +185,7 @@ a {
 }
 
 .contact-form .right .btn-secondary {
-    background: var(--main-bg-color);
+    background: black;
     color: #fff;
     border: 0;
 }
@@ -176,5 +197,7 @@ a {
 
 .footer {
     border-top: 1px solid #e8e8e8c2;
-    padding: 30px
+    padding: 30px;
+    background: var(--primary-bg-color);
+    color: var(--primary-txt-color);
 }
