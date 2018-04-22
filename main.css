@@ -37,8 +37,8 @@ a {
 }
 
 .nav-link:hover {
-    background: var(--secondary-bg-color);
-    color: var(--secondary-txt-color);
+    background: var(--secondary-bg-color) !important;
+    color: var(--secondary-txt-color) !important;
 }
 
 .navbar-collapse {
