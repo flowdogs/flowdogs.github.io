@@ -2,6 +2,15 @@ $(document).ready(function () {
     scrollAnimationWhenNavbarIsClicked();
 });
 
+$("#logo").on("mouseout", function () {
+    this.src = "images/flowdog-logo-notext-transparent.png";
+    this.style = "background-color: inherit";
+});
+
+$("#logo").on("mouseover", function () {
+    this.src = "images/flowdog-logo-notext-inverted-transparent.png";
+    this.style = "background-color: #f4f4f4";
+});
 
 function scrollAnimationWhenNavbarIsClicked() {
     $(".navbar a").click(function () {
