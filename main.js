@@ -41,49 +41,24 @@ function orderNow(title) {
 }
 
 function loadDatabase(doneFunction) {
-    // var req = new XMLHttpRequest();
-    // req.open("GET", "https://flowdogs.github.io/data/board-database.xlsx", true);
-    // req.responseType = "arraybuffer";
+    var req = new XMLHttpRequest();
+    req.open("GET", "https://flowdogs.github.io/data/board-database.xlsx", true);
+    req.responseType = "arraybuffer";
 
-    // req.onload = function (e) {
-    //     var result;
-    //     var data = new Uint8Array(req.response);
-    //     var workbook = XLSX.read(data, {
-    //         type: "array"
-    //     });
+    req.onload = function (e) {
+        var result;
+        var data = new Uint8Array(req.response);
+        var workbook = XLSX.read(data, {
+            type: "array"
+        });
 
-    //     workbook.SheetNames.forEach(function (y) {
-    //         result = XLSX.utils.sheet_to_json(workbook.Sheets[y]);
-    //     });
+        workbook.SheetNames.forEach(function (y) {
+            result = XLSX.utils.sheet_to_json(workbook.Sheets[y]);
+        });
 
-    //     doneFunction(result);
-    // };
-    // req.send();
-
-
-    $.ajax({
-        url: "https://flowdogs.github.io/data/board-database.xlsx",
-        type: "GET",
-        dataType: "binary",
-        processData: false,
-        responseType:'arraybuffer',
-        headers:{'Content-Type':'image/png','X-Requested-With':'XMLHttpRequest'},
-        success: function (result) {
-            var data = new Uint8Array(req.response);
-            var workbook = XLSX.read(data, {
-                type: "array"
-            });
-
-            workbook.SheetNames.forEach(function (y) {
-                result = XLSX.utils.sheet_to_json(workbook.Sheets[y]);
-            });
-
-            doneFunction(result);
-        },
-        error: function (error) {
-            console.error(error);
-        }
-    });
+        doneFunction(result);
+    };
+    req.send();
 }
 
 function buildFlowdogshopCarousel(results) {
@@ -94,13 +69,13 @@ function buildFlowdogshopCarousel(results) {
     });
 
     displayResults.forEach(function (result) {
-        if (result['Image back']) {
+        if (result.ImageBack) {
             flowdogshopHtml += 
                 `<div class="col-lg-4 col-md-4 col-sm-12">
                     <div class="img-container" onclick="orderNow('${result.Title} - ${result.Price}')">
-                        <img src="images/flowdogshop/${result['Image front']}" class="img-fluid" alt="${result.Description}">
+                        <img src="images/flowdogshop/${result.ImageFront}" class="img-fluid" alt="${result.Description}">
                         <div class="img-overlay">
-                            <img src="images/flowdogshop/${result['Image back']}" class="img-fluid" alt="${result.Description}">
+                            <img src="images/flowdogshop/${result.ImageBack}" class="img-fluid" alt="${result.Description}">
                         </div>
                         <div class="text-overlay">
                             Order now
@@ -111,7 +86,7 @@ function buildFlowdogshopCarousel(results) {
             flowdogshopHtml += 
                 `<div class="col-lg-4 col-md-4 col-sm-12">
                     <div class="img-container" onclick="orderNow('${result.Title} - ${result.Price}')">
-                        <img src="images/flowdogshop/${result['Image front']}" class="img-fluid" alt="${result.Description}">
+                        <img src="images/flowdogshop/${result.ImageFront}" class="img-fluid" alt="${result.Description}">
                         <div class="text-overlay">
                             Order now
                         </div>
