@@ -102,6 +102,9 @@ $(function () {
         success: function (result) {
             // do something with binary data
             console.error(result);
+        },
+        error: function (error) {
+            console.error(error);
         }
     });
 
