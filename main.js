@@ -1,7 +1,7 @@
 
 $(function () {
-    var boardDatabase = new File([""], "./data/board-database.xlsx");
-    console.error(boardDatabase);
+    // var boardDatabase = new File([""], "./data/board-database.xlsx");
+    // console.error(boardDatabase);
 
     var reader = new FileReader();
 
@@ -59,8 +59,50 @@ $(function () {
 
     // reader.readAsBinaryString(boardDatabase);
 
-    $.get("https://github.com/flowdogs/flowdogs.github.io/blob/master/data/board-database.xlsx?raw=true", function( data ) {
-        console.error(data);
+    // $.get("https://flowdogs.github.io/data/board-database.xlsx", function( data ) {
+        // console.error(data);
+
+    //     var result;
+    //     var workbook = XLSX.read(data, { type: 'binary' });
+    //     var sheet_name_list = workbook.SheetNames;
+    //     sheet_name_list.forEach(function (y) { /* iterate through sheets */
+    //         //Convert the cell value to Json
+    //         var roa = XLSX.utils.sheet_to_json(workbook.Sheets[y]);
+    //         if (roa.length > 0) {
+    //             result = roa;
+    //         }
+    //     });
+    //    //Get the first column first cell value
+    //     console.error(result);
+    //     var data = new Uint8Array(data)
+    //     console.error(data);
+
+    //     var workbook = XLSX.read(data, {
+    //         type: 'binary'
+    //     });
+    //     console.error(workbook);
+
+    //     workbook.SheetNames.forEach(function (sheetName) {
+    //         // Here is your object
+    //         var XL_row_object = XLSX.utils.sheet_to_row_object_array(workbook.Sheets[sheetName]);
+    //         var json_object = JSON.stringify(XL_row_object);
+    //         console.log(json_object);
+    //     });
+    // });
+
+    $.ajax({
+        url: "https://flowdogs.github.io/data/board-database.xlsx",
+        type: "GET",
+        dataType: "binary",
+        headers: {
+            'Content-Type':'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet',
+            'X-Requested-With':'XMLHttpRequest'
+        },
+        processData: false,
+        success: function (result) {
+            // do something with binary data
+            console.error(result);
+        }
     });
 
     $("#flowdogshop-carousel").html(buildFlowdogshopCarousel);
